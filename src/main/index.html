@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-
-    <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,31 +10,30 @@
 </head>
 <body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <div class="container"> 
-        <img src="styles/img/macarons-2548827_1920.jpg">
-        <h1 id="title">Favorite Dessert Survey</h1>
-        <h2>We appreciate your input!</h2>
-        <p id="description"></p>
-        <form id="survey-form">
-            <label for="name" id="name-label">Name</label>
-            <input type="name" id="name" placeholder="Enter Your Name"></br> 
-            <label for="email" id="email-label">Email</label>
-            <input type="email" id="email" placeholder="Enter Your Email" required></br>
-            <label for="number" id="number-label">Age</label>
-            <input type="number" id="number" placeholder="Enter Your Age"></br>
-                        <!-- number validator -->
+        <img src="../styles/img/macarons-2548827_1920.jpg">
+        <h1 id="title">Favorite Dessert Survey Form</h1>
+        <p id="description">We appreciate your input</p>
+        <div class="container"> 
 
-            <label for="job" id="job-label">Which option best describes your current occupation?</label>
-            <select id="job"></select>
-            <label for="find" id="find-label">How did you find our cafe?</label>
-            <label for="desserts">What is your favorite dessert?</label>
-            <label for="flavor">What is your favorite flavor?</label>
-            <label for="amount">How many desserts do you eat a week?</label>
-            <input type="checkbox">
+        <form id="survey-form">
+            <label for="name" id="name-label">Name:</label></br>
+            <input type="text" id="name" placeholder="Enter Your Name" required></br> 
+            <label for="email" id="email-label">Email:</label></br>
+            <input type="email" id="email" placeholder="Enter Your Email" required></br>
+            <label for="number" id="number-label">Age:</label></br>
+            <input type="number" id="number" placeholder="Enter Your Age" min="10" max="100" required></br>
+            <label for="job" id="job-label">Which option best describes your current occupation?</label></br>
+            <select id="job"></select></br>
+            <label for="find" id="find-label">How did you find our cafe?</label></br>
+            <label for="desserts">What is your favorite dessert?</label></br>
+            <label for="flavor">What is your favorite flavor?</label></br>
+            <label for="amount">How many desserts do you eat a week?</label></br>
+            <input type="checkbox"></br>
+            <div>Please add additonal comments</div></br>
+            <textarea></textarea></br>
             <input type="submit" value="Submit">
             <h2>Thank you!</h2>
-            <div>Please add additonal comments</div>
-            <textarea></textarea>
+          
         </form>
 
 
