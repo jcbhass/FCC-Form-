@@ -3,70 +3,93 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Alex+Brush&display=swap">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Favorite Dessert</title>
+    <title>Favorite Dessert</title> 
 </head>
 <body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-        <img src="../styles/img/macarons-2548827_1920.jpg">
-        <h1 id="title">Favorite Dessert Survey Form</h1>
-        <p id="description">We appreciate your input</p>
+        <div class="hero"></div>
+        <img class="hero" src="../styles/img/macarons-2548827_1920.jpg">
+        <h1 id="title">Cafe Monique</h1>
         <div class="container"> 
+            <h2>Favorite Dessert Survey Form</h2>
+            <p id="description">We appreciate your input</p>
+            <form id="survey-form"> 
+                <div class="name-label">
+                    <label for="name" id="name-label">Name:</label>
+                    <input type="text" id="name" placeholder="Enter Your Name" required>
+                </div>
+                <div class="email-label">
+                    <label for="email" id="email-label">Email:</label>
+                    <input type="email" id="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="age-label">
+                    <label for="number" id="number-label">Age:</label>
+                    <input type="number" id="number" placeholder="Enter Your Age" min="10" max="100" required>
+                </div>
+                <div class="find-us">
+                    <label for="dropdown">How did you hear about our cafe?</label>
+                </br>
+                    <select name="find" id="dropdown">
+                        <option value="friend" selected>Friend</option>
+                        <option value="search">Search Engine</option>
+                        <option value="ad">Advertisement</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <!--How many as drop down, have how did you find as checkbox, have radio as favorite flavor, then have rank desserts as javascript-->
+                <div class="favorite-flavor">
+                    <label for="flavor">What are your favorite flavors?</label>
+                    <input type="checkbox" name="flavor" value="1">Vanilla</input>
+                    <input type="checkbox" name="flavor" value="2">Chocolate</input>
+                    <input type="checkbox" name="flavor" value="3">Raspberry</input>
+                    <input type="checkbox" name="flavor" value="4">Strawberry</input>
+                    <input type="checkbox" name="flavor" value="5">Lemon</input>
+                    <input type="checkbox" name="flavor" value="6">Other</input>
+                </div>
 
-        <form id="survey-form">
-            <label for="name" id="name-label">Name:</label></br>
-            <input type="text" id="name" placeholder="Enter Your Name" required></br> 
-            <label for="email" id="email-label">Email:</label></br>
-            <input type="email" id="email" placeholder="Enter Your Email" required></br>
-            <label for="number" id="number-label">Age:</label></br>
-            <input type="number" id="number" placeholder="Enter Your Age" min="10" max="100" required></br>
-            <label for="job" id="job-label">Which option best describes your current occupation?</label></br>
-            <select id="job"></select></br>
-            <label for="find" id="find-label">How did you find our cafe?</label></br>
-            <label for="desserts">What is your favorite dessert?</label></br>
-            <label for="flavor">What is your favorite flavor?</label></br>
-            <label for="amount">How many desserts do you eat a week?</label></br>
-            <input type="checkbox"></br>
-            <div>Please add additonal comments</div></br>
-            <textarea></textarea></br>
-            <input type="submit" value="Submit">
-            <h2>Thank you!</h2>
-          
-        </form>
+                <label for="desserts">What is your favorite type of dessert?</label></br>
+                <input type="radio"></br>
+                <div>Please add additonal comments</div>
+                <textarea name="comment" placeholder="Your message" rows="4" cols="60"></textarea></br>
+                <input type="submit" value="Submit">
+                <h2>Thank you!</h2>
+            
+            </form>
 
 
 
-<a href="https://pixabay.com/users/pixel2013-2364555/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2548827">S. Hermann &amp; F. Richter</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2548827">Pixabay</a>
-    </div>
+            <a href="https://pixabay.com/users/pixel2013-2364555/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2548827">S. Hermann &amp; F. Richter</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2548827">Pixabay</a>
+        </div>
+        <script src="../index.js"
 </body>
 </html>
 
 
 
 
-<!-- 
+// <!-- User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
 
+// User Story #7: Inside the form, I can enter a number in a field with id="number".
 
-User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
+// User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
 
-User Story #7: Inside the form, I can enter a number in a field with id="number".
+// User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.
 
-User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
+// User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".
 
-User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.
+// User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
 
-User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".
+// User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".
 
-User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
+// User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.
 
-User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".
+// User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.
 
-User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.
+// User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.
 
-User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.
-
-User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.
-
-User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. -->
+// User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs. -->
