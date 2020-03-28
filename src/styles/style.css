@@ -103,5 +103,9 @@ input[type=submit] {
     margin-right: 15px;
 }
 
-
+.btn:hover, 
+.btn: active, 
+input[type=submit]:hover {
+    background-color: rgb(245, 74, 188); 
+}
 
